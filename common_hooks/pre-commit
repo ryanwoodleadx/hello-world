@@ -4,7 +4,7 @@ git status
 
 read -p "What needs to be checked? " CHECKER
 echo $CHECKER
-
+wait
 echo "Running puppet-lint"
 
 if ! puppet-lint --error-level error . ; then
