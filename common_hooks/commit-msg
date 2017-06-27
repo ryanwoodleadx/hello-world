@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MESSAGE=git cat-file $1
+MESSAGE=git cat $1
 CHECK_INFP=${MESSAGE:0:4}
 CHECK_INF=${MESSAGE:0:3}
 
