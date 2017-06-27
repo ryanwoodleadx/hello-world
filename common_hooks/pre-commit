@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! git diff_index --check --cached Head ; then
+if ! git diff-index --check --cached HEAD ; then
   echo "Whitespace detected, aborting"
   exit 1
 else
