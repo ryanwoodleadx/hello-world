@@ -1,12 +1,15 @@
 #!/bin/bash
 
-FILE=$1
-echo $FILE
+MESSAGE=$1
+CHECK_INFP=${MESSAGE:0:4}
+CHECK_INF=${MESSAGE:0:3}
 
-#if ! grep -i "" $1 ; then
-#  echo "Did not find 'hello' in the commit message, please try again"
-#  exit 1
-#else
-#  echo "Message is in the right format!"
-#  exit 0
-#fi
+echo $CHECK_INFP, $CHECK_INF
+
+if ! grep -i "" $1 ; then
+  echo "Did not find 'hello' in the commit message, please try again"
+  exit 1
+else
+  echo "Message is in the right format!"
+  exit 0
+fi
