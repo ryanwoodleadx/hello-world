@@ -4,12 +4,15 @@ MESSAGE=$(cat $1)
 CHECK_INFP=${MESSAGE:0:5}
 CHECK_INF=${MESSAGE:0:4}
 
-echo $FILE, $MESSAGE, $CHECK_INFP, $CHECK_INF
+#echo $FILE, $MESSAGE, $CHECK_INFP, $CHECK_INF
 
-if ! grep -i "hello" $1 ; then
-  echo "Did not find 'hello' in the commit message, please try again"
-  exit 1
-else
+if [[ $CHECK_INFP = "INFP-" ]] ; then
   echo "Message is in the right format!"
   exit 0
+elif [[ $CHECK_INF = "INF-" ]] ; then
+  echo "Message is in the right format!" 
+  exit 0
+else
+  echo "Did not find 'INFP' or 'INF in the commit message, please try again"
+  exit 1
 fi
