@@ -4,8 +4,6 @@ MESSAGE=$(cat $1)
 CHECK_INFP=${MESSAGE:0:5}
 CHECK_INF=${MESSAGE:0:4}
 
-#echo $FILE, $MESSAGE, $CHECK_INFP, $CHECK_INF
-
 if [[ $CHECK_INFP = "INFP-" ]] ; then
   echo "Message is in the right format!"
   exit 0
