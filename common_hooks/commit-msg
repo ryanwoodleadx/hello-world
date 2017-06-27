@@ -1,10 +1,10 @@
 #!/bin/bash
 
-MESSAGE=git cat $1
-CHECK_INFP=${MESSAGE:0:4}
-CHECK_INF=${MESSAGE:0:3}
+MESSAGE=$(cat $1)
+CHECK_INFP=${MESSAGE:0:5}
+CHECK_INF=${MESSAGE:0:4}
 
-echo $CHECK_INFP, $CHECK_INF
+echo $FILE, $MESSAGE, $CHECK_INFP, $CHECK_INF
 
 if ! grep -i "hello" $1 ; then
   echo "Did not find 'hello' in the commit message, please try again"
