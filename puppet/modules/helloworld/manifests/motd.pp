@@ -7,4 +7,5 @@ class helloworld::motd {
   content => "Hello, world!\n",
   }
 
+
 }
