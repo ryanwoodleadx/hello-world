@@ -1,9 +1,11 @@
 #!/bin/bash
 
-if ! git diff-index --check --cached HEAD ; then
-  echo "Whitespace detected, aborting"
+echo "Running puppet-lint"
+
+if ! puppet-lint --error-level error . ; then
+  echo "Something isn't right"
   exit 1
 else
-  echo "Everything seems ok"
+  echo "Looks good"
   exit 0
 fi
