@@ -1,9 +1,12 @@
 #!/bin/bash
 
-if ! grep -i "hello" $1 ; then
-  echo "Did not find 'hello' in the commit message, please try again"
-  exit 1
-else
-  echo "Message is in the right format!"
-  exit 0
-fi
+FILE=$1
+echo $FILE
+
+#if ! grep -i "" $1 ; then
+#  echo "Did not find 'hello' in the commit message, please try again"
+#  exit 1
+#else
+#  echo "Message is in the right format!"
+#  exit 0
+#fi
