@@ -2,11 +2,8 @@
 
 MESSAGE=$(cat $1)
 
-if [[ ${MESSAGE:0:5} = "INFP-" ]] ; then
+if [[ ${MESSAGE:0:5} = "INFP-" ]] || [[ ${MESSAGE:0:4} = "INF-" ]] ; then
   echo "Message is in the right format!"
-  exit 0
-elif [[ ${MESSAGE:0:4} = "INF-" ]] ; then
-  echo "Message is in the right format!" 
   exit 0
 else
   echo "Did not find 'INFP' or 'INF in the commit message, please try again"
