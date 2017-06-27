@@ -1,13 +1,11 @@
 #!/bin/bash
 
 MESSAGE=$(cat $1)
-CHECK_INFP=${MESSAGE:0:5}
-CHECK_INF=${MESSAGE:0:4}
 
-if [[ $CHECK_INFP = "INFP-" ]] ; then
+if [[ ${MESSAGE:0:5} = "INFP-" ]] ; then
   echo "Message is in the right format!"
   exit 0
-elif [[ $CHECK_INF = "INF-" ]] ; then
+elif [[ ${MESSAGE:0:4} = "INF-" ]] ; then
   echo "Message is in the right format!" 
   exit 0
 else
