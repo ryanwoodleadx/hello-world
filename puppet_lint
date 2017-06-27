@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if ! puppet-lint puppet-lint --error-level error HEAD ; then
-  echo "Something isn't right"
-  exit 1
-else
-  echo "Looks good"
-  exit 0
